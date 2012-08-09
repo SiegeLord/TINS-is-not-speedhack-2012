@@ -10,6 +10,8 @@
 #include "Camera.hpp"
 #include "EntityFactory.hpp"
 
+#include <stdexcept>
+
 Tmx::Map RoomLoader::map;
 
 void RoomLoader::Initialize()

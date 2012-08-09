@@ -159,7 +159,7 @@ Entity::getCollisionRect()
 }
 
 bool
-Entity::Collides( const CollisionRect& aRect1, CollisionRect& aRect2 )
+Entity::Collides( const CollisionRect& aRect1, const CollisionRect& aRect2 )
 {
 	if (aRect1.myBottomRight.x <= aRect2.myTopLeft.x)
 		return false;

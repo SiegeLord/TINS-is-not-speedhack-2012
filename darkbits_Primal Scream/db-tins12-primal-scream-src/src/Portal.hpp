@@ -1,6 +1,6 @@
 #pragma once
 
-#include "entity.hpp"
+#include "Entity.hpp"
 
 class Portal : public Entity
 {

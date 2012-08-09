@@ -26,7 +26,7 @@ public:
 		float2 myTopLeft;
 		float2 myBottomRight;
 	};
-	static bool Collides(const CollisionRect& aRect1, CollisionRect& aRect2);
+	static bool Collides(const CollisionRect& aRect1, const CollisionRect& aRect2);
 
 	virtual int getLayer() = 0;
 	virtual void update();
