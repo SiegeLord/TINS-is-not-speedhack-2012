@@ -67,7 +67,7 @@ void editorKeyChar(ref ALLEGRO_EVENT event) {
 		case ALLEGRO_KEY_L:
 			if (event.keyboard.modifiers & ALLEGRO_KEYMOD_CTRL) {
 				game.level=loadLevel(LEVEL_TO_EDIT);
-				if (game.editor.planeNum>=game.level.planes.length) game.editor.planeNum=game.level.planes.length-1;
+				if (game.editor.planeNum>=game.level.planes.length) game.editor.planeNum=cast(int)(game.level.planes.length-1);
 			}
 			break;
 		case ALLEGRO_KEY_T:

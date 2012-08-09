@@ -48,7 +48,7 @@ void burnStuffUsingTorches() {
 						//Burn stuff in the next layer up - or, if clear, proceed to the next layer beyond that.
 						foreach_reverse (toPlaneNum; 0..planeNum) {
 							bool canProceedToNextLayer=false;
-							scanOverlappingTiles(planeNum,x,y,TORCH_SIZE_FOR_BURNING,toPlaneNum,new class OverlapTestCallbacks {
+							scanOverlappingTiles(cast(int)planeNum,x,y,TORCH_SIZE_FOR_BURNING,cast(int)toPlaneNum,new class OverlapTestCallbacks {
 								bool tileIsInteresting(int toPlaneNum, Plane toPlane, int toX, int toY, TILE* toTile) {
 									return
 										toTile.type==TileType.CLEAR ||

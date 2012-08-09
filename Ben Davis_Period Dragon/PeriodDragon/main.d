@@ -1,7 +1,7 @@
 module main;
 
 pragma(lib, "dallegro5");
-pragma(lib, "allegro-505-monolith-mt-dll");
+//pragma(lib, "allegro-505-monolith-mt-dll");
 
 import allegro5.allegro;
 import allegro5.allegro_primitives;

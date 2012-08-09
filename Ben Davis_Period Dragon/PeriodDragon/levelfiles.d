@@ -16,7 +16,7 @@ private const string FILEID="TINS12BD";
 void saveLevel(Level level, ALLEGRO_FILE* f) {
 	al_fwrite(f,FILEID.ptr,FILEID.length);
 	al_fputc(f,VERSION);
-	al_fputc(f,level.planes.length);
+	al_fputc(f,cast(char)level.planes.length);
 	foreach (plane; level.planes) {
 		al_fwrite16le(f,cast(short)plane.w);
 		al_fwrite16le(f,cast(short)plane.h);

@@ -73,11 +73,11 @@ void drawMenu() {
 		if (length>longest) longest=length;
 	}
 
-	int bx=longest/2+SCREEN_W/40, by=SCREEN_H*(menu.length+2)/60;
+	int bx=cast(int)(longest/2+SCREEN_W/40), by=cast(int)(SCREEN_H*(menu.length+2)/60);
 	int rx=SCREEN_W/40, ry=SCREEN_H/30;
 	al_draw_filled_rounded_rectangle(SCREEN_W/2-bx,SCREEN_H/2-by,SCREEN_W/2+bx,SCREEN_H/2+by,rx,ry,ALLEGRO_COLOR(0,0,0,0.5));
 
-	int y=30-menu.length;
+	int y=cast(int)(30-menu.length);
 	foreach (i, ref item; menu) {
 		ALLEGRO_COLOR col=ALLEGRO_COLOR(0.6,0.8,0.3,1);
 		if (menuOpt==i) col=ALLEGRO_COLOR(1,1,1,1);
@@ -89,10 +89,10 @@ void drawMenu() {
 void menuKeyChar(ref ALLEGRO_EVENT event) {
 	switch (event.keyboard.keycode) {
 		case ALLEGRO_KEY_UP:
-			menuOpt=saneMod(menuOpt-1,menu.length);
+			menuOpt=saneMod(menuOpt-1,cast(int)menu.length);
 			break;
 		case ALLEGRO_KEY_DOWN:
-			menuOpt=saneMod(menuOpt+1,menu.length);
+			menuOpt=saneMod(menuOpt+1,cast(int)menu.length);
 			break;
 		case ALLEGRO_KEY_LEFT:
 			if (menu[menuOpt].left) menu[menuOpt].left();

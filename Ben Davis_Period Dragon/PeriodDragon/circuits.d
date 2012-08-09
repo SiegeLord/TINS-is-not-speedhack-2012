@@ -58,7 +58,7 @@ void updatePoweredCircuits() {
 					//To do this:
 					//- Floodfill 'potentially powered' (tmpFilledLocation) from the diamond.
 					//- Whenever the floodfill comes back on itself, remember it happened.
-					fillPotential(QENTRY(planeNum,x,y,-1));
+					fillPotential(QENTRY(cast(int)planeNum,x,y,-1));
 					//- Clear away the 'potentially powered' flag everywhere.
 					resetTmpFilledLocations();
 					//- Revisit all the places where the floodfill came back on itself. Backtrack in both directions towards the source, until the paths reconverge. This outlines a distinct cycle. Refill that cycle as potentially powered as we go.
